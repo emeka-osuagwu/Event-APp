@@ -15,6 +15,9 @@ Download the installer from [getcomposer.org/download](https://getcomposer.org/d
 ## Quick Start
   *seed the database by running `php artisan db:seed`
 
+## URL to api doc on postman
+  *https://documenter.getpostman.com/collection/view/1035891-54c84a5e-1faa-9a9c-4e57-da1950cfb37e`
+
 ## Setup the environmental variables (.env file)
         APP_ENV    =local
         APP_DEBUG  =true
