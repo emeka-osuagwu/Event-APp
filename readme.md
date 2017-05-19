@@ -12,6 +12,9 @@
 ## Install Composer
 Download the installer from [getcomposer.org/download](https://getcomposer.org/doc/00-intro.md), execute it and follow the instructions
 
+## Quick Start
+  *seed the database by running `php artisan db:seed`
+
 ## Setup the environmental variables (.env file)
         APP_ENV    =local
         APP_DEBUG  =true
