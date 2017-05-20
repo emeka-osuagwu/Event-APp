@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Firebase\JWT\JWT;
 use Illuminate\Http\Request;
+use App\Events\SendEmail;
 use App\Http\Services\JWTService;
 use App\Http\Services\AdminService;
 use Illuminate\Support\Facades\Auth;
@@ -67,6 +68,8 @@ class AdminController extends Controller
 			"status" => 201,
 			"message" => "Account Created"
 		];
+
+		event(new SendEmail($admin));
 
 		return sendResponse($response_data, 201);
 	}

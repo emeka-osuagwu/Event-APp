@@ -9,9 +9,6 @@
 3. Update the values in `.env` file
 4. Run ```php artisan migrate``` to install the database migration
 
-## Install Composer
-Download the installer from [getcomposer.org/download](https://getcomposer.org/doc/00-intro.md), execute it and follow the instructions
-
 ## Quick Start
   *seed the database by running `php artisan db:seed`
 
