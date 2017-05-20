@@ -80,15 +80,15 @@
   User can book hall / event stands
   User can view hall / event stands details  
 
-###PROJECT DEVELOPMENT PHASE
+### PROJECT DEVELOPMENT PHASE
 
-###API BACKEND SERVICE
+### API BACKEND SERVICE
   * Create backend authentication service for the user system.
   * Create CRUD service for the hall / event stands on the application
   * Create Booking service for the hall / event stands 
   * Create readable response service for the backend service
 
-###TEST DRIVEN DEVELOPMENT
+### TEST DRIVEN DEVELOPMENT
   * Create  successful / error test cases for the authentication service components
   * Create  successful / error test cases for the hall / event stands service components
   * Create  successful / error test cases for the hall / event stands booking service components
