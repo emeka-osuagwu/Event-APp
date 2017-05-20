@@ -74,16 +74,22 @@
       * Database - mysql
 
 ### General overview:
-The overview is presented from two perspectives. The perpective of a user of the app (front-end) and the perspective of an admin(owner of the podcasting service).
+  User can registers to the platform.
+  User can login into the platform.
+  User can find hall / event stands on a map view.
+  User can book hall / event stands
+  User can view hall / event stands details  
 
-**frontend users should be able to:**
+###PROJECT DEVELOPMENT PHASE
 
-     1. Use SuyaBay as a guest. No registration/signin required.
-     2. Use SuyaBay as a registered user. Registration/signin required.
-     3. Have access to user dashboard:
-     **_Registered users_**:
-          - Should be able to subscribe/unsubscribe to channels and/or specific episodes
-          - See list of subscribed channels
-          - Have access to contact form
-          - Have access to FAQs, About and Terms and conditions pages
-          - Have access to other functionalities not yet implemented!
+###API BACKEND SERVICE
+  Create backend authentication service for the user system.
+  Create CRUD service for the hall / event stands on the application
+  Create Booking service for the hall / event stands 
+  Create readable response service for the backend service
+
+###TEST DRIVEN DEVELOPMENT
+  Create  successful / error test cases for the authentication service components
+  Create  successful / error test cases for the hall / event stands service components
+  Create  successful / error test cases for the hall / event stands booking service components
+  Create  successful / error test cases for the API response service
