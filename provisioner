@@ -20,6 +20,9 @@ cp /tmp/001-talented.conf /etc/apache2/sites-available
 a2ensite  001-talented.conf
 service apache2 restart
 
+curl -Ss https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/bin/composer
+
 bootstrapdb(){
     cat <<EOF | mysql -uroot
     DROP DATABASE IF EXISTS samtt;
