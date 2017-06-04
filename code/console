@@ -1,0 +1,40 @@
+#! /usr/bin/env php
+
+
+<?php
+
+
+use Emeka\MO\Console\Commands\AllRequest;
+use Symfony\Component\Console\Application;
+use Emeka\MO\Console\Commands\RequestStatus;
+use Emeka\MO\Console\Commands\PendingRequest;
+use Emeka\MO\Console\Commands\ProcessedRequest;
+use Emeka\MO\Console\Commands\DeletePendingRequest;
+
+require 'vendor/autoload.php';
+
+$app = new Application('Sam Media MO cli tool', 'v1.0.1');
+
+$config = [
+    'driver' 	=> 'mysql',
+    'host' 		=> 'localhost',
+    'database' 	=> 'mo',
+    'username' 	=> 'root',
+    'password' 	=>  null,
+    'charset'   => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix'    => '',
+];
+
+$capsule = new \Illuminate\Database\Capsule\Manager;
+$capsule->addConnection($config);
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
+
+$app->add(new AllRequest);
+$app->add(new PendingRequest);
+$app->add(new ProcessedRequest);
+$app->add(new DeletePendingRequest);
+$app->add(new RequestStatus);
+
+$app->run();

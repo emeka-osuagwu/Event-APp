@@ -1,0 +1,25 @@
+{
+    "name": "emekaosuagwu/test",
+    "authors": [
+        {
+            "name": "Emeka Osuagwu",
+            "email": "emekaosuagwu@hotmail.com"
+        }
+    ],
+    "require": {
+		"vlucas/phpdotenv": "^2.4",
+        "slim/slim": "^3.8",
+        "emeka/candy": "^1.0",
+        "nategood/commando": "*",
+        "symfony/console":"~2.0",
+        "illuminate/database": "~5.1",
+        "respect/validation": "^1.1",
+        "nesbot/carbon": "^1.22"
+    },
+    "autoload": {
+        "psr-4": {
+            "Emeka\\MO\\": "src/"
+        },
+        "classmap":["src/"]
+    }
+}
