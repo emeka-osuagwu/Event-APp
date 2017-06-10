@@ -1,0 +1,26 @@
+#! /usr/bin/env php
+
+<?php
+
+require 'vendor/autoload.php';
+
+use Emeka\MO\Console\Commands\AllRequest;
+use Symfony\Component\Console\Application;
+use Emeka\MO\Console\Commands\RequestStatus;
+use Emeka\MO\Console\Commands\PendingRequest;
+use Emeka\MO\Console\Commands\ProcessedRequest;
+use Emeka\MO\Console\Commands\DeletePendingRequest;
+use Emeka\MO\Console\Commands\Database\RunMigrations;
+
+$app 		= new Application('Sam Media MO cli tool', 'v1.0.1');
+$capsule 	= new \Illuminate\Database\Capsule\Manager;
+$database 	= new Emeka\Database\DatabaseConnection($capsule);
+
+$app->add(new AllRequest);
+$app->add(new RequestStatus);
+$app->add(new RunMigrations);
+$app->add(new PendingRequest);
+$app->add(new ProcessedRequest);
+$app->add(new DeletePendingRequest);
+
+$app->run();
